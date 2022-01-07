@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+   <div class="row">
+      <div class="col">
+         {{#if user.isAdmin}}
+            <a class="container-fluid" href="/"> 
+               <button class="btn btn-lg btn-outline-success me-2">Blog Node.js
+               </button>
+            </a>
+         {{else}}
+            <a class="container-fluid" href="/routes/admin">
+               <button class="btn btn-lg btn-outline-success me-2" id="" style=" width: 150px; height: 50px;
+                  vertical-align: text-top;  text-indent: 0px; letter-spacing: -1px;">Blog Node.js
+               </button>
+            </a>            
+         {{/if}}
+      </div>
+   </div>
+<nav class="justify-content-end">
+   <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="row">
+         <div class="col">
+            <div class="container-fluid justify-content">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+            </div>
+         </div>
+      </div>
+         <div class="collapse navbar-collapse" id="navbarNav" style="text-indent: -5px;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">    
+               {{#if user.isAdmin}}
+                  <li class="nav-item">
+                     <a class="nav-link disable" aria-current="page" href="/">Home <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/routes/admin/categorias">Categorias</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/routes/admin/postagens">Postagens</a>
+                  </li>
+               {{else}}
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="/routes/admin">Home <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/categorias">Categorias</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/routes/admin/postagens">Postagens</a>
+                  </li>
+               {{/if}}
+
+               {{#if user}}
+                  <li class="nav-item" id="">
+                     <a class="nav-link active" style="color: #1678ef;" href="/usuarios/logout">Sair</a>
+                  </li>
+               {{else}}
+                  <li class="nav-item" id="">
+                     <a class="nav-link active" style="color: #1678ef;" href="/usuarios/login">Login</a>
+                  </li>
+                  <li class="nav-item" id="">
+                     <a class="nav-link" style="color: #eefa00;" href="/usuarios/registro">Registrar-se</a>
+                  </li>
+               {{/if}}
+            </ul>
+         </div>
+      </div>
+   </nav>
+</nav>

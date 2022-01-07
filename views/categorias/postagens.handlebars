@@ -1,0 +1,28 @@
+<h1>{{categoria.nome}}</h1> 
+{{#each postagens}}
+<div class="card">
+   <div class="card-body mt-4">
+      <h3>{{titulo}}</h3>
+      <p>{{descricao}}</p>
+         <a href="/postagem/{{slug}}">
+            <button class="btn btn-success">Leia mais</button>
+         </a>
+      <hr>
+      <small><b>Data de publicação: </b>{{data}}</small>
+   </div>
+</div>
+<div class="nav justify-content-end"> 
+      <a href="/categorias">
+         <button class="btn btn-danger" style="position: absolute; top: 36.75%; right: 17.1%;">
+            <svg id="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="47" height="39" fill="none" 
+               stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+               style="width: 1.5rem; height: 1.5rem;">
+               <path d="M10 6 L2 16 10 26 M2 16 L30 16"/>
+            </svg>
+         </button>
+      </a> 
+   </div>
+<br>   
+{{else}}
+   <h5>Nenhuma postagem</h5>
+{{/each}}

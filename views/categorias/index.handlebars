@@ -1,0 +1,28 @@
+<h2>Categorias: </h2>
+   <div class="card">
+      <div class="card-body">
+         {{#each categorias}}
+            <a href="/categorias/{{slug}}"><h5>{{nome}}</h5></a>
+         {{else}}
+            <h4 class="mt-3">Nenhuma categoria registrada!<h4>
+         {{/each}}
+          
+         {{#if user.isAdmin}}
+            <div class="nav justify-content-end"> 
+               <a href="/routes/admin/categorias">
+                  <button class="btn btn-danger">
+                     <svg id="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="47" height="39" fill="none" 
+                        stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        style="width: 1.5rem; height: 1.5rem;">
+                        <path d="M10 6 L2 16 10 26 M2 16 L30 16"/>
+                     </svg>
+                  </button>
+               </a> 
+            </div>
+         {{else}}
+
+         {{/if}}
+         
+         
+      </div>
+   </div>
