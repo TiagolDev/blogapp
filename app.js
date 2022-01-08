@@ -2,8 +2,6 @@
 const express = require('express')
 const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
-const morganBody = require('morgan-body')
-const fs = require('fs')
 const admin = require('./routes/admin')
 const path = require('path')        //trabalha com diretórios e serve para manipular pastas
 const app = express()
@@ -39,14 +37,7 @@ const db = require('./config/db')
    //Body Parser
       app.use(bodyParser.urlencoded({extended: true}))
       app.use(bodyParser.json())
-      
-      const log = fs.createWriteStream(
-         path.join(__dirname, "./logs", "express.log"), {flags: "a"}
-      )
-      morganBody(app,{
-         noColors: true,
-         stream: log
-      })
+
    //Handlebars
       app.engine('handlebars', handlebars({
          defautLayout: 'main', runtimeOptions: {
