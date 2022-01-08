@@ -1,7 +1,7 @@
 {
   "name": "blogapp",
   "version": "1.0.0",
-  "description": "Blog com node.js/mongodb/JS com funcionalidades de página administrativa. Onde só os admin, conseguem acesso a determinadas páginas, podendo cadastrar postagens e categorias",
+  "description": "Blog com node.js - mongodb - JS com funcionalidades de página administrativa. Onde só os admin, conseguem acesso a determinadas páginas, podendo cadastrar postagens e categorias",
   "main": "app.js",
   "scripts": {
     "test": "test",
