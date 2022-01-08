@@ -3,4 +3,3 @@ if(process.env.NODE_ENV == 'production'){
 }else{
   module.exports ={mongoURI: "mongodb://localhost/blogapp"}
 }
-/* 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 */
