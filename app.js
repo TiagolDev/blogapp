@@ -97,6 +97,7 @@ const db = require('./config/db')
             }).catch((err)=>{
                req.flash('error_msg', 'Houve um erro ao listar os posts!')
                res.redirect('/')
+        
             })
          }else{
             req.flash('error_msg', 'Esta categoria não exite!')
